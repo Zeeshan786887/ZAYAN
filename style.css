@@ -1,0 +1,189 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:rgb(247, 247, 247);
+    font-family:'Segoe UI', sans-serif;
+    color:rgb(0, 0, 0);
+    overflow-y:auto;
+    padding-top:65px;
+    padding-bottom:80px;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:65px;
+    background:#000000fa;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    z-index:1000;
+    box-shadow:0 2px 12px rgba(255, 255, 255, 0.5);
+}
+
+.nav-logo{
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:6px;
+    color:rgb(255, 255, 255);
+    text-shadow:0 0 6px red, 0 0 18px crimson;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+    font-weight:700;
+}
+
+.hamburger{
+    display:none;
+    font-size:28px;
+    color:rgb(255, 255, 255);
+    cursor:pointer;
+}
+
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-280px;
+    width:280px;
+    height:100%;
+    background:white;
+    padding-top:80px;
+    transition:0.4s ease;
+    z-index:1200;
+}
+
+.close-btn{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:28px;
+    color:black;
+    cursor:pointer;
+}
+
+.mobile-menu a{
+    display:block;
+    padding:16px 25px;
+    text-decoration:none;
+    color:rgb(255, 0, 0);
+    font-weight:700;
+    border-bottom:1px solid #ddd;
+}
+
+.mobile-menu.active{
+    right:0;
+}
+
+#cobraRain{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+    pointer-events:none;
+}
+
+.cobra-box{
+    position:relative;
+    z-index:2;
+    margin:30px auto 100px;
+    text-align:center;
+    max-width:420px;
+    padding:10px;
+}
+
+.cobra-title{
+    font-size:30px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-shadow:0 0 10px red, 0 0 20px purple;
+}
+
+.cobra-text{
+    margin-top:15px;
+    font-size:20px;
+    font-weight:900;
+    animation: glowBlink 1.2s infinite;
+    text-shadow:0 0 5px red, 0 0 15px orange;
+}
+
+.cobra-img{
+    margin-top:25px;
+    width:47%;
+    max-width:320px;
+    border-radius:18px;
+    box-shadow:0 0 30px red;
+}
+
+@keyframes glowBlink{
+    0%{opacity:1;}
+    50%{opacity:0.4;}
+    100%{opacity:1;}
+}
+
+.social-bar{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:black;
+    display:flex;
+    justify-content:space-around;
+    padding:12px 0;
+    border-top:2px solid red;
+    z-index:1000;
+}
+
+.social-bar a{
+    font-size:26px;
+    text-shadow:0 0 10px red;
+}
+
+.fb{color:#1877f2;}
+.ig{color:#ff2fa4;}
+.tt{color:#fff;}
+.yt{color:#ff0000;}
+
+.whatsapp-float{
+    position:fixed;
+    bottom:90px;
+    right:20px;
+    width:56px;
+    height:56px;
+    background:#25d366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    color:white;
+    z-index:1500;
+    box-shadow:0 0 15px rgba(37,211,102,0.9);
+    animation: waPulse 1.5s infinite;
+}
+
+@keyframes waPulse{
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
+    70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+@media(max-width:768px){
+    .nav-links{display:none;}
+    .hamburger{display:block;}
+}
